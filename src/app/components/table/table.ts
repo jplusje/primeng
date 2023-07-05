@@ -222,9 +222,9 @@ export class TableService {
                 <ng-container *ngTemplateOutlet="summaryTemplate"></ng-container>
             </div>
 
-            <div #resizeHelper class="p-column-resizer-helper" style="display:none" *ngIf="resizableColumns"></div>
-            <span #reorderIndicatorUp class="pi pi-arrow-down p-datatable-reorder-indicator-up" style="display: none;" *ngIf="reorderableColumns"></span>
-            <span #reorderIndicatorDown class="pi pi-arrow-up p-datatable-reorder-indicator-down" style="display: none;" *ngIf="reorderableColumns"></span>
+            <div #resizeHelper class="p-column-resizer-helper" [ngStyle]="{ display: 'none' }" *ngIf="resizableColumns"></div>
+            <span #reorderIndicatorUp class="pi pi-arrow-down p-datatable-reorder-indicator-up" [ngStyle]="{ display: 'none' }" *ngIf="reorderableColumns"></span>
+            <span #reorderIndicatorDown class="pi pi-arrow-up p-datatable-reorder-indicator-down" [ngStyle]="{ display: 'none' }" *ngIf="reorderableColumns"></span>
         </div>
     `,
     providers: [TableService],
